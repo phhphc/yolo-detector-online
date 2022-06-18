@@ -1,0 +1,28 @@
+html {
+    font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+}
+
+.container {
+    margin: 20px 16.66%;
+}
+
+.btn {
+    background-color: #0055ff;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    padding: 4px 16px;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    font: inherit;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: #0048d9;
+}
+
+.a {
+    color: #0055ff;
+}

@@ -1,0 +1,17 @@
+{% extends "yolo_detector/base.html" %}
+
+{% block content %}
+<div class="container" id="introduction">
+    <h1>YOLO Detector !</h1>
+    <p>
+        <a class="a" href="{% url 'yolo_detector_home' %}">Detect New Image</a>
+    </p>
+    <p>Here is your result</p>
+</div>
+
+<div id="detection">
+    <img src="{{ img_src }}" alt="object detection image" />
+</div>
+
+
+{% endblock content %}

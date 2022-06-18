@@ -1,0 +1,54 @@
+#introduction h1 {
+    text-align: center;
+}
+
+#introduction p {
+    text-align: justify;
+    text-align-last: center;
+    font-size: 1.2rem;
+}
+
+#introduction .img-wraper {
+    display: flex;
+    justify-content: center;
+}
+
+#introduction img {
+    max-width: 50%;
+}
+
+#upload-div input[type="file"] {
+    display: none;
+}
+
+#upload-div input[type="file"]:invalid~input[type="submit"],
+#upload-div input[type="file"]:invalid~#image-name {
+    display: none;
+}
+
+#upload-div label {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    background-color: whitesmoke;
+}
+
+#upload-div #image-name {
+    color: green;
+    margin: 8px;
+}
+
+#detection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#detection img {
+    max-width: 100%;
+}

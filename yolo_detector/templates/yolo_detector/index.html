@@ -1,0 +1,35 @@
+{% extends "yolo_detector/base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container" id="introduction">
+    <h1>YOLO Detector !</h1>
+    <p>
+        YOLO is an abbreviation for the term 'You Only Look Once'
+    </p>
+    <div class="img-wraper">
+        <img src="{% static 'yolo_detector/logo.png' %}" alt="yologo">
+    </div>
+</div>
+
+<div class="container" id="upload-div">
+    <form method="POST" action="{% url 'yolo_detector_detect' %}" enctype="multipart/form-data">
+        {% csrf_token %}
+
+        <label onchange="handleChange()">
+            <div>Select Image</div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" fill="currentColor" class="bi bi-camera-fill"
+            viewBox="0 0 16 16">
+                <path d="M10.5 8.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
+                <path
+                d="M2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4H2zm.5 2a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1zm9 2.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0z" />
+            </svg>
+            {{ form.image }}
+            <div id="image-name"></div>
+            <input type="submit" class="btn" value="Submit">
+        </label>
+    </form>
+</div>
+
+<script src="{% static 'yolo_detector/index.js' %}"></script>
+{% endblock content %}
